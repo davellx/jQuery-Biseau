@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>jQuery Biseau Example</title>
+	<style type="text/css">
+	
+		html,body{
+			margin:0;
+			padding:0;
+			background:#FFF url(background.jpg) repeat 0 0;
+			color:#FFF;
+			font-weight:bold;
+			font-size:12px;
+			border-top:1px solid #000;
+		}
+		
+		#bloc1{
+			margin:10px;
+			padding:10px;
+			background-color:#FF00FF;
+			width:150px;
+		}
+		
+		#bloc2{
+			position:absolute;
+			margin:30px;
+			padding:30px;
+			background-color:#00FFFF;
+			top:30px;
+			right:30px;
+			width:150px;
+		}
+		
+		#bloc3{
+			position:relative;
+			margin:10px;
+			padding:30px;
+			background-color:#FFFF00;
+			top:30px;
+			left:30px;
+			width:150px;
+			color:#000;
+		}
+		
+	</style>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+	<script type="text/javascript" src="../src/jquery.biseau.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$('#bloc1,#bloc2,#bloc3').biseau({tl:10,tr:10,br:30,bl:10});
+			
+		})
+	</script>
+  </head>
+  <body>
+    <div id="bloc1">
+		margin:10px;<br/>
+		padding:10px;<br/>
+		background-color:#FF00FF;<br/>
+		width:150px;<br/>
+	</div>
+    <div id="bloc2">
+			position:absolute;<br/>
+			margin:30px;<br/>
+			padding:30px;<br/>
+			background-color:#00FFFF;<br/>
+			top:30px;<br/>
+			right:30px;<br/>
+			width:150px;<br/>
+	</div>
+    <div id="bloc3">
+			position:relative;<br/>
+			margin:30px;<br/>
+			padding:30px;<br/>
+			background-color:#00FFFF;<br/>
+			top:30px;<br/>
+			left:30px;<br/>
+			width:150px;<br/>
+			color:#000;<br/>
+	</div>
+  </body>
+</html>
