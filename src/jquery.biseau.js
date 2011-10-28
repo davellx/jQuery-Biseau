@@ -53,7 +53,7 @@
 			$(this).prepend(blocCentral);
 			
 			//return;
-			console.log(topLeft+"px");
+			//console.log(topLeft+"px");
 			if(Math.max(topLeft,bottomLeft) > 0){
 				if(topLeft != bottomLeft){
 					var blocTL = $('<div></div>');
@@ -62,7 +62,9 @@
 					blocTL.css("top","0");
 					blocTL.css("left","0");
 					blocTL.css("border-style","solid");
-					if(topLeft > bottomLeft){
+					blocTL.css("height","0");
+					blocTL.css("width","0");
+						if(topLeft > bottomLeft){
 						blocTL.css("border-color","transparent "+color+" "+color+" transparent");
 						blocTL.css("border-width",topLeft+"px "+topLeft+"px "+(height-bottomLeft-topLeft)+"px 0");
 					}else{
@@ -75,6 +77,8 @@
 					blocBL.css("position","absolute");
 					blocBL.css("left","0");
 					blocBL.css("border-style","solid");
+					blocBL.css("height","0");
+					blocBL.css("width","0");
 					if(topLeft > bottomLeft){
 						blocBL.css("top",(height-bottomLeft)+"px");
 						blocBL.css("border-color",""+color+" "+color+" transparent transparent");
@@ -82,7 +86,7 @@
 					}else{
 						blocBL.css("top",topLeft+"px");
 						blocBL.css("border-color",""+color+" "+color+" transparent transparent");
-						console.log((height-bottomLeft-topLeft)+"px "+bottomLeft+"px "+bottomLeft+"px 0")
+						//console.log((height-bottomLeft-topLeft)+"px "+bottomLeft+"px "+bottomLeft+"px 0")
 						blocBL.css("border-width",(height-bottomLeft-topLeft)+"px "+bottomLeft+"px "+bottomLeft+"px 0");
 					}
 					$(this).prepend(blocBL);
@@ -101,36 +105,40 @@
 			}
 			if(Math.max(topRight,bottomRight) > 0){
 				if(topRight != bottomRight){
-					var blocTL = $('<div></div>');
-					blocTL.css("z-index",zIndex);
-					blocTL.css("position","absolute");
-					blocTL.css("top","0");
-					blocTL.css("left",(width-Math.max(topRight,bottomRight))+"px");
-					blocTL.css("border-style","solid");
+					var blocTR = $('<div></div>');
+					blocTR.css("z-index",zIndex);
+					blocTR.css("position","absolute");
+					blocTR.css("top","0");
+					blocTR.css("left",(width-Math.max(topRight,bottomRight))+"px");
+					blocTR.css("border-style","solid");
+					blocTR.css("height","0");
+					blocTR.css("width","0");
 					if(topRight > bottomRight){
-						blocTL.css("border-color","transparent transparent "+color+" "+color+"");
-						blocTL.css("border-width",topRight+"px 0 "+(height-bottomRight-topRight)+"px "+topRight+"px");
+						blocTR.css("border-color","transparent transparent "+color+" "+color+"");
+						blocTR.css("border-width",topRight+"px 0 "+(height-bottomRight-topRight)+"px "+topRight+"px");
 					}else{
-						blocTL.css("border-color","transparent transparent "+color+" "+color+"");
-						blocTL.css("border-width","0 "+topRight+"px "+topRight+"px "+(bottomRight-topRight)+"px");
+						blocTR.css("border-color","transparent transparent "+color+" "+color+"");
+						blocTR.css("border-width","0 "+topRight+"px "+topRight+"px "+(bottomRight-topRight)+"px");
 					}
-					$(this).prepend(blocTL);
-					var blocBL = $('<div></div>');
-					blocBL.css("z-index",zIndex);
-					blocBL.css("position","absolute");
-					blocBL.css("left",(width-Math.max(topRight,bottomRight))+"px");
-					blocBL.css("border-style","solid");
+					$(this).prepend(blocTR);
+					var blocBR = $('<div></div>');
+					blocBR.css("z-index",zIndex);
+					blocBR.css("position","absolute");
+					blocBR.css("left",(width-Math.max(topRight,bottomRight))+"px");
+					blocBR.css("border-style","solid");
+					blocBR.css("height","0");
+					blocBR.css("width","0");
 					if(topRight > bottomRight){
-						blocBL.css("top",(height-bottomRight)+"px");
-						blocBL.css("border-color",""+color+" transparent transparent "+color+"");
-						blocBL.css("border-width",""+bottomRight+"px "+bottomRight+"px 0 "+(topRight-bottomRight)+"px");
+						blocBR.css("top",(height-bottomRight)+"px");
+						blocBR.css("border-color",""+color+" transparent transparent "+color+"");
+						blocBR.css("border-width",""+bottomRight+"px "+bottomRight+"px 0 "+(topRight-bottomRight)+"px");
 					}else{
-						blocBL.css("top",topRight+"px");
-						blocBL.css("border-color",""+color+" transparent transparent "+color+"");
+						blocBR.css("top",topRight+"px");
+						blocBR.css("border-color",""+color+" transparent transparent "+color+"");
 						//console.log((height-bottomRight-topRight)+"px "+bottomRight+"px "+bottomRight+"px 0")
-						blocBL.css("border-width",(height-bottomRight-topRight)+"px 0 "+bottomRight+"px "+bottomRight+"px");
+						blocBR.css("border-width",(height-bottomRight-topRight)+"px 0 "+bottomRight+"px "+bottomRight+"px");
 					}
-					$(this).prepend(blocBL);
+					$(this).prepend(blocBR);
 				}else{
 					var blocR = $('<div></div>');
 					blocR.css("z-index",zIndex);
