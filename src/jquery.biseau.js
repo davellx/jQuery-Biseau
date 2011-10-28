@@ -69,7 +69,7 @@
 						blocTL.css("border-color","transparent "+color+" "+color+" transparent");
 						blocTL.css("border-width","0 "+bottomLeft+"px "+topLeft+"px "+topLeft+"px ");
 					}
-					//$(this).prepend(blocTL);
+					$(this).prepend(blocTL);
 					var blocBL = $('<div></div>');
 					blocBL.css("z-index",zIndex);
 					blocBL.css("position","absolute");
@@ -85,7 +85,7 @@
 						console.log((height-bottomLeft-topLeft)+"px "+bottomLeft+"px "+bottomLeft+"px 0")
 						blocBL.css("border-width",(height-bottomLeft-topLeft)+"px "+bottomLeft+"px "+bottomLeft+"px 0");
 					}
-					//$(this).prepend(blocBL);
+					$(this).prepend(blocBL);
 				}else{
 					var blocL = $('<div></div>');
 					blocL.css("z-index",zIndex);
