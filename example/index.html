@@ -43,6 +43,25 @@
 			color:#000;
 		}
 		
+		ul{
+			margin:0;
+			padding:0;
+			position:relative;
+			top:30px;
+			list-style-type:none;
+		}
+		
+		ul li{
+			background-color:#CCC;
+			float:left;
+			padding:10px 20px;
+			margin:0 1px;
+		}
+		
+		ul li a{
+			color:#000;
+		}
+		
 	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
 	<script type="text/javascript" src="../src/jquery.biseau.js"></script>
@@ -52,7 +71,7 @@
 			$('#bloc1').biseau({tl:10,tr:20,br:23,bl:10});
 			$('#bloc2').biseau({tl:10,tr:20,br:20,bl:40});
 			$('#bloc3').biseau({tl:10,tr:20,br:30,bl:40});
-			
+			$('ul li').biseau({tr:15})
 		})
 	</script>
   </head>
@@ -82,5 +101,21 @@
 			width:150px;<br/>
 			color:#000;<br/>
 	</div>
+	
+	<ul>
+		<li>
+			<a href="#">list link #1</a>
+		</li>
+		<li>
+			<a href="#">link #2</a>
+		</li>
+		<li>
+			<a href="#">link #3</a>
+		</li>
+		<li>
+			<a href="#">link #4 and the last</a>
+		</li>
+	</ul>
+	
   </body>
 </html>
